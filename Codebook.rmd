@@ -1,0 +1,223 @@
+---
+title: "CodeBook-Run Analysis"
+author: "Edie Hawthorne"
+date: "6/29/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Code Book - Human Activity Recognition Using Smartphones Dataset
+
+This is a code book describes the variables, the data and any transformations work performed to clean up the data.
+
+The data set used in this run_analysis extracts only the measurements on the mean and standard deviation for each measurement in both the traing and test sets.
+
+## subject
+### An indentifier of the subject who carried out the experiment with a group of 30 volunteers whithin an age bracket of 19-48 years.
+
+## activity
+### The six activities each subject performed
+* WALKING
+* WALKING_UPSTAIRS
+* WALKING_DOWNSTAIRS
+* SITTING
+* STANDING
+* LAYING
+
+## Here is the table for other features
+| Feature | Feature Description |
+| -------- | --------|
+| tBodyAcc_mean_XYZ_avg | The mean of the body accelerometer 3-axial raw signals from the time domain |
+| tBodyAcc_std_XYZ_avg | The standard deviation of the body accelerometer 3-axial raw signals from the time domain |
+| tGravityAcc_mean_XYZ_avg | The mean of the gravity accelerometer 3-axial raw signals from the time domain | tGravityAcc_std_XYZ_avg | The standard deviation of the gravity accelerometer 3-axial raw signals from the time domain |
+| tBodyAccJerk_mean_XYZ_avg | The mean of the body linear acceleration 3-axial Jerk signals from the time domain |
+| tBodyAccJerk_std_XYZ_avg | The standard deviation of the body linear acceleration 3-axial Jerk signals from the time domain |
+| tBodyGyro_mean_XYZ_avg | The mean of the body gyroscope 3-axial raw signals from the time domain |
+| tBodyGyro_std_XYZ_avg | The standard deviation of the body gyroscope 3-axial raw signals from the time domain |
+| tBodyGyroJerk_mean_XYZ_avg | The mean of the body linear angular velocity 3-axial Jerk signals from the time domain |
+| tBodyGyroJerk_std_XYZ_avg | The standard deviation of the body linear angular velocity 3-axial Jerk signals from the time domain |
+| tBodyAccMag_mean_avg | The mean of the magnitude of the body accelerometer 3-axial raw signals from the time domain using Euclidean norm |
+| tBodyAccMag_std_avg | The standard deviation of the magnitude of the body accelerometer 3-axial raw signals from the time domain using Euclidean norm |
+| tGravityAccMag_mean_avg | The mean of the magnitude of the gravity accelerometer 3-axial raw signals from the time domain using Euclidean norm |
+| tGravityAccMag_std_avg | The standard deviation of the magnitude of the gravity accelerometer 3-axial raw signals from the time domain using Euclidean norm |
+| tBodyAccJerkMag_mean_avg | The mean of standard deviation of the body linear acceleration 3-axial Jerk signals from the time domain using Euclidean norm |
+| tBodyAccJerkMag_std_avg | The standard deviation of the body linear acceleration 3-axial Jerk signals from the time domain using Euclidean norm |
+| tBodyGyroMag_mean_avg | The mean of the magnitude of the body linear angular velocity 3-axial Jerk signals from the time domain using Euclidean norm |
+| tBodyGyroMag_std_avg | The standard deviation of the magnitude of the body linear angular velocity 3-axial Jerk signals from the time domain using Euclidean norm |
+| tBodyGyroJerkMag_mean_avg | The mean of the magnitude of the body linear angular velocity 3-axial Jerk signals from the time domain using Euclidean norm |
+| tBodyGyroJerkMag_std_avg | The standard deviation of the magnitude of the body linear angular velocity 3-axial Jerk signals from the time domain using Euclidean norm |
+| fBodyAcc_mean_XYZ_avg | The mean of the body accelerometer 3-axial raw signals from the frequency domain |
+| fBodyAcc_std_XYZ_avg | The standard deviation of the body accelerometer 3-axial raw signals from the frequency domain |
+| fBodyAcc_meanFreq_XYZ_avg | The mean of the mean frequency of the body accelerometer 3-axial raw signals from the frequency domain |
+| fBodyAccJerk_mean_XYZ_avg | The mean of the body linear acceleration and angular velocity 3-axial Jerk signals from the frequency domain |
+| fBodyAccJerk_std_XYZ_avg | The standard deviation of the body linear acceleration and angular velocity 3-axial Jerk signals from the frequency domain |
+| fBodyAccJerk_meanFreq_XYZ_avg | The mean of the mean frequency of the body accelerometer 3-axial Jerk signals from the frequency domain |
+| fBodyGyro_mean_XYZ_avg | The mean of the body gyroscope 3-axial raw signals from the frequency domain |
+| fBodyGyro_std_XYZ_avg | The standard deviation of the body gyroscope 3-axial raw signals from the frequency domain |
+| fBodyGyro_meanFreq_XYZ_avg | The mean of mean frequency of the body gyroscope 3-axial raw signals from the frequency domain |
+| BodyAccMag_mean_avg | The mean of the magnitude of the body accelerometer 3-axial raw signals from the frequency domain using Euclidean norm |
+| fBodyAccMag_std_avg | The standard deviation of the magnitude of the body accelerometer 3-axial raw signals from the frequency domain using Euclidean norm |
+| fBodyAccMag_meanFreq_avg | The mean of mean frequency of the magnitude of the body accelerometer 3-axial raw signals from the frequency domain using Euclidean norm |
+| fBodyBodyAccJerkMag_mean_avg | The mean of standard deviation of the body linear acceleration 3-axial Jerk signals from the frequency domain using Euclidean norm |
+| fBodyBodyAccJerkMag_std_avg | The standard deviation of the body linear acceleration 3-axial Jerk signals from the frequency domain using Euclidean norm |
+| fBodyBodyAccJerkMag_meanFreq_avg | The mean of mean frequency of the body linear acceleration 3-axial Jerk signals from the frequency domain using Euclidean norm |
+| fBodyBodyGyroMag_mean_avg | The mean of the magnitude of the body linear angular velocity 3-axial Jerk signals from the frequency domain using Euclidean norm |
+| fBodyBodyGyroMag_std_avg | The standard deviation of the magnitude of the body linear angular velocity 3-axial Jerk signals from the frequency domain using Euclidean norm |
+| fBodyBodyGyroMag_meanFreq_avg | The mean of the mean frequency of the magnitude of the body linear angular velocity 3-axial Jerk signals from the frequency domain using Euclidean norm |
+| fBodyBodyGyroJerkMag_mean_avg | The mean of the magnitude of the body linear angular velocity 3-axial Jerk signals from the frequency domain using Euclidean norm |
+| fBodyBodyGyroJerkMag_std_avg | The standard deviation of the magnitude of the body linear angular velocity 3-axial Jerk signals from the frequency domain using Euclidean norm |
+| fBodyBodyGyroJerkMag_meanFreq_avg | The mean of the mean frequency of the magnitude of the body linear angular velocity 3-axial Jerk signals from the frequency domain using Euclidean norm |
+| angle_tBodyAccMean_gravity_avg | The angle by averaging the gravity accelerometer 3-axial raw signals from the time domain in a single window sample |
+| angle_tBodyAccJerkMeangravityMean_avg | The angle by averaging the body linear acceleration 3-axial Jerk signals and the gravity accelerometer 3-axial raw signals from the time domain in a single window sample |
+| angle_tBodyGyroMean_gravityMean_avg | The angle by averaging the body gyroscope 3-axial raw signals from the time domain and the gravity accelerometer 3-axial raw signals from the time domain in a single window sample |
+| angle_tBodyGyroJerkMean_gravityMean_avg | The angle by averaging the body gyroscope 3-axial raw signals from the time domain, the body linear acceleration 3-axial Jerk signals and the gravity accelerometer 3-axial raw signals from the time domain in a single window sample |
+| angle_XYZ_gravityMean_avg | The angle by averaging the gravity accelerometer 3-axial raw signals from both the time domain and frequency domainin a single window sample |
+
+
+
+
+
+
+## DONE -------
+
+
+## tBodyAcc_mean_XYZ_avg
+### The mean of the body accelerometer 3-axial raw signals from the time domain
+
+## tBodyAcc_std_XYZ_avg
+### The standard deviation of the body accelerometer 3-axial raw signals from the time domain
+
+## tGravityAcc_mean_XYZ_avg
+### The mean of the gravity accelerometer 3-axial raw signals from the time domain
+
+## tGravityAcc_std_XYZ_avg
+### The standard deviation of the gravity accelerometer 3-axial raw signals from the time domain
+
+## tBodyAccJerk_mean_XYZ_avg
+### The mean of the body linear acceleration 3-axial Jerk signals from the time domain
+
+## tBodyAccJerk_std_XYZ_avg
+### The standard deviation of the body linear acceleration 3-axial Jerk signals from the time domain
+
+## tBodyGyro_mean_XYZ_avg
+### The mean of the body gyroscope 3-axial raw signals from the time domain
+
+## tBodyGyro_std_XYZ_avg
+### The standard deviation of the body gyroscope 3-axial raw signals from the time domain
+
+## tBodyGyroJerk_mean_XYZ_avg
+### The mean of the body linear angular velocity 3-axial Jerk signals from the time domain
+
+## tBodyGyroJerk_std_XYZ_avg
+### The standard deviation of the body linear angular velocity 3-axial Jerk signals from the time domain
+
+## tBodyAccMag_mean_avg
+### The mean of the magnitude of the body accelerometer 3-axial raw signals from the time domain using Euclidean norm
+
+## tBodyAccMag_std_avg
+### The standard deviation of the magnitude of the body accelerometer 3-axial raw signals from the time domain using Euclidean norm
+
+## tGravityAccMag_mean_avg
+### The mean of the magnitude of the gravity accelerometer 3-axial raw signals from the time domain using Euclidean norm
+
+## tGravityAccMag_std_avg
+### The standard deviation of the magnitude of the gravity accelerometer 3-axial raw signals from the time domain using Euclidean norm
+
+## tBodyAccJerkMag_mean_avg
+### The mean of standard deviation of the body linear acceleration 3-axial Jerk signals from the time domain using Euclidean norm
+
+## tBodyAccJerkMag_std_avg
+### The standard deviation of the body linear acceleration 3-axial Jerk signals from the time domain using Euclidean norm
+
+## tBodyGyroMag_mean_avg
+### The mean of the magnitude of the body linear angular velocity 3-axial Jerk signals from the time domain using Euclidean norm
+
+## tBodyGyroMag_std_avg
+### The standard deviation of the magnitude of the body linear angular velocity 3-axial Jerk signals from the time domain using Euclidean norm
+
+## tBodyGyroJerkMag_mean_avg
+### The mean of the magnitude of the body linear angular velocity 3-axial Jerk signals from the time domain using Euclidean norm
+
+## tBodyGyroJerkMag_std_avg
+### The standard deviation of the magnitude of the body linear angular velocity 3-axial Jerk signals from the time domain using Euclidean norm
+
+## fBodyAcc_mean_XYZ_avg
+### The mean of the body accelerometer 3-axial raw signals from the frequency domain
+
+## fBodyAcc_std_XYZ_avg
+### The standard deviation of the body accelerometer 3-axial raw signals from the frequency domain
+
+## fBodyAcc_meanFreq_XYZ_avg
+### The mean of the mean frequency of the body accelerometer 3-axial raw signals from the frequency domain
+
+## fBodyAccJerk_mean_XYZ_avg
+### The mean of the body linear acceleration and angular velocity 3-axial Jerk signals from the frequency domain
+
+## fBodyAccJerk_std_XYZ_avg
+### The standard deviation of the body linear acceleration and angular velocity 3-axial Jerk signals from the frequency domain
+
+## fBodyAccJerk_meanFreq_XYZ_avg
+### The mean of the mean frequency of the body accelerometer 3-axial Jerk signals from the frequency domain
+
+## fBodyGyro_mean_XYZ_avg
+### The mean of the body gyroscope 3-axial raw signals from the frequency domain
+
+## fBodyGyro_std_XYZ_avg
+### The standard deviation of the body gyroscope 3-axial raw signals from the frequency domain
+
+## fBodyGyro_meanFreq_XYZ_avg
+### The mean of mean frequency of the body gyroscope 3-axial raw signals from the frequency domain
+
+## fBodyAccMag_mean_avg
+### The mean of the magnitude of the body accelerometer 3-axial raw signals from the frequency domain using Euclidean norm
+
+## fBodyAccMag_std_avg
+### The standard deviation of the magnitude of the body accelerometer 3-axial raw signals from the frequency domain using Euclidean norm
+
+## fBodyAccMag_meanFreq_avg
+### The mean of mean frequency of the magnitude of the body accelerometer 3-axial raw signals from the frequency domain using Euclidean norm
+
+## fBodyBodyAccJerkMag_mean_avg
+### The mean of standard deviation of the body linear acceleration 3-axial Jerk signals from the frequency domain using Euclidean norm
+
+## fBodyBodyAccJerkMag_std_avg
+### The standard deviation of the body linear acceleration 3-axial Jerk signals from the frequency domain using Euclidean norm
+
+## fBodyBodyAccJerkMag_meanFreq_avg
+### The mean of mean frequency of the body linear acceleration 3-axial Jerk signals from the frequency domain using Euclidean norm
+
+## fBodyBodyGyroMag_mean_avg
+### The mean of the magnitude of the body linear angular velocity 3-axial Jerk signals from the frequency domain using Euclidean norm
+
+## fBodyBodyGyroMag_std_avg
+### The standard deviation of the magnitude of the body linear angular velocity 3-axial Jerk signals from the frequency domain using Euclidean norm
+
+## fBodyBodyGyroMag_meanFreq_avg
+### The mean of the mean frequency of the magnitude of the body linear angular velocity 3-axial Jerk signals from the frequency domain using Euclidean norm
+
+## fBodyBodyGyroJerkMag_mean_avg
+### The mean of the magnitude of the body linear angular velocity 3-axial Jerk signals from the frequency domain using Euclidean norm
+
+## fBodyBodyGyroJerkMag_std_avg
+### The standard deviation of the magnitude of the body linear angular velocity 3-axial Jerk signals from the frequency domain using Euclidean norm
+
+## fBodyBodyGyroJerkMag_meanFreq_avg
+### The mean of the mean frequency of the magnitude of the body linear angular velocity 3-axial Jerk signals from the frequency domain using Euclidean norm
+
+## angle_tBodyAccMean_gravity_avg
+### The angle by averaging the gravity accelerometer 3-axial raw signals from the time domain in a single window sample
+
+## angle_tBodyAccJerkMeangravityMean_avg
+### The angle by averaging the body linear acceleration 3-axial Jerk signals and the gravity accelerometer 3-axial raw signals from the time domain in a single window sample
+
+## angle_tBodyGyroMean_gravityMean_avg
+### The angle by averaging the body gyroscope 3-axial raw signals from the time domain and the gravity accelerometer 3-axial raw signals from the time domain in a single window sample
+
+## angle_tBodyGyroJerkMean_gravityMean_avg
+### The angle by averaging the body gyroscope 3-axial raw signals from the time domain, the body linear acceleration 3-axial Jerk signals and the gravity accelerometer 3-axial raw signals from the time domain in a single window sample
+
+## angle_XYZ_gravityMean_avg
+### The angle by averaging the gravity accelerometer 3-axial raw signals from both the time domain and frequency domainin a single window sample
