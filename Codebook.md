@@ -8,12 +8,12 @@ The data set used in this run\_analysis extracts only the measurements
 on the mean and standard deviation for each measurement in both the
 traing and test sets.
 
-subject
+Subject
 -------
 
-### An indentifier of the subject who carried out the experiment with a group of 30 volunteers whithin an age bracket of 19-48 years.
+An indentifier of the subject who carried out the experiment with a group of 30 volunteers whithin an age bracket of 19-48 years.
 
-activity
+Activity
 --------
 
 ### The six activities each subject performed
@@ -25,7 +25,7 @@ activity
 -   STANDING
 -   LAYING
 
-Here is the table for other features
+Motion Features
 ------------------------------------
 
 <table style="width:25%;">
