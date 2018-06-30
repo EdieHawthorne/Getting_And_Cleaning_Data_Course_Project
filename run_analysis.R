@@ -36,7 +36,7 @@ binded_test <- cbind(subject_test_df, xtest_df, ytest_df)
 
 new_df <- rbind(binded_df, binded_test)
 
-#Extra only the mean and standard deviation for each measurement
+#Extract only the mean and standard deviation for each measurement
 
 test_df = new_df %>% select(subject, label, matches("mean|std"))
 
@@ -57,5 +57,6 @@ names(new_df2) = make.names(match_3)
 tidy_df <- new_df2 %>% group_by(subject, label, activity) %>% 
     summarize_all(funs(avg = mean))
 
+# write a text file
 write.table(tidy_df, "./repos/tidy_dataset.txt", row.names = FALSE)
 
