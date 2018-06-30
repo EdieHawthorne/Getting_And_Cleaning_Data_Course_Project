@@ -7,5 +7,5 @@ The data set used in this run_analysis extracts only the measurements on the mea
 ## The dataset includes the following files:
 1. 'run_analysis.R': includes the R code 
 2. 'Codebook.rmd': describes the variables and data
-3. 'README.rmd': explains how all of the script work and how they are connected
+3. 'README.md': explains how all of the script work and how they are connected
 4. 'tidy_dataset.csv': the extracted tidy data set in csv format
